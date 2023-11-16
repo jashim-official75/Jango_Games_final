@@ -1,7 +1,15 @@
-
+$(document).ready(function() {
+    $("#toggleButton").click(function() {
+        $(".serarch_box").fadeToggle(); // Show/hide the search bar
+        if ($(".serarch_box").is(":visible")) {
+            // If the search bar is visible, focus on the input field
+            $("#searchInput").focus();
+        }
+    });
+  });
 
 // ======================================
-// DROPDOWN ACTIVE 
+// DROPDOWN ACTIVE
 // ======================================
 $(document).ready(function () {
   $("#menu").click(function () {
@@ -10,7 +18,7 @@ $(document).ready(function () {
   });
 });
 // ======================================
-// SEEMORE ACTIVE 
+// SEEMORE ACTIVE
 // ======================================
 
 $(document).ready(function () {
@@ -200,7 +208,7 @@ $('.featured_game-wrapper').owlCarousel({
     600: {
       items: 3,
 
-         
+
     },
        768: {
       items: 4,
@@ -213,7 +221,7 @@ $('.featured_game-wrapper').owlCarousel({
     },
     1200: {
       items: 6,
-       slideBy: 6, 
+       slideBy: 6,
 
     },
     1300: {
@@ -272,7 +280,7 @@ $('.testomonial_wrapper').owlCarousel({
     600: {
       items: 2,
 
-         
+
     },
        768: {
       items: 2,
@@ -285,7 +293,7 @@ $('.testomonial_wrapper').owlCarousel({
     },
     1200: {
       items: 2,
-       slideBy: 6, 
+       slideBy: 6,
 
     },
     1300: {
@@ -336,7 +344,7 @@ menuBtn.addEventListener('click', () => {
 
 
 // ======================================
-// FULLSCREEN MODE 
+// FULLSCREEN MODE
 // ======================================
 
 const fullScreenBtn = document.getElementById('openScreen');
@@ -419,4 +427,5 @@ function topScroll() {
 // ======================================
 // GENREBOX ACCORDION ACTIVATION CODE
 // ======================================
+
 

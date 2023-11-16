@@ -13,7 +13,7 @@ ul {
 }
 
 /* searchbar */
-serarch_box {
+.serarch_box {
     position: relative;
   }
   .search {
@@ -82,7 +82,21 @@ serarch_box {
   .search_btn button i {
     font-size: 3rem;
   }
+  .mobile_searchicon
+  {
+    display: none;
+  }
+  .mobile_searchicon i {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    font-size: 2.5rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center
 
+  }
   /* searchbar */
 
 /* pagination */
@@ -2825,6 +2839,25 @@ h3 {
   {
     display: none !important;
   }
+  .mobile_searchicon
+  {
+    display: flex;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 1rem;
+    transform: scale(0.9);
+  }
+  .serarch_box {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    padding: 2rem;
+    background: #5700AE;
+    z-index: 1000;
+    display: none;
+}
   #homepageContent .Content_wrapper {
     max-height: 100% !important;
     overflow: hidden auto !important;

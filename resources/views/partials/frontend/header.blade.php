@@ -43,12 +43,15 @@
             <form action="" method="GET">
                 <div class="serarch_box">
                     <div class="search">
-                        <div class="search_bar"><input type="text" name="search" id=""
+                        <div class="search_bar"><input type="text" name="search" id="searchInput"
                                 placeholder="Search Game"></div>
                         <div class="search_btn"><button type="submit"><i class="uil uil-search"></i></button></div>
                     </div>
                 </div>
             </form>
+        </div>
+        <div class="mobile_searchicon" id="toggleButton">
+            <i class="uil uil-search"></i>
         </div>
         <div class="menu-btn">
             <div class="menu-btn-burger"></div>
