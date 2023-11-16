@@ -1,0 +1,208 @@
+@media only screen and (max-width : 1846px) {
+  .navitem a {
+    padding: 0.5em 0;
+    font-size: 1.5rem;
+  }
+  .navitem li {
+    margin: 0 0.8rem;
+  }
+  .featured_game .roundCard .game_content a {
+    font-size: 1.8rem;
+    padding: 0.5rem;
+  }
+}
+@media only screen and (max-width : 1549px) {
+  .navitem a {
+    padding: 0.5em 0;
+    font-size: 1.2rem;
+  }
+  .navitem li {
+    margin: 0 0.5rem;
+  }
+  .gameCard_bottom_img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media only screen and (max-width : 1361px) {
+  .navitem a {
+    padding: 0.5em 0;
+    font-size: 1.2rem;
+  }
+  .navitem li {
+    margin: 0 0.5rem;
+  }
+}
+@media only screen and (max-width:1280px)
+{
+    #playground .playground {
+    width: 100%;
+}
+
+#action_games .actiongames .action__card-bottom .game_name a {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.cattegory_name {
+  width: 60%;
+}
+.cattegory_name a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navitem a {
+    padding: 0.5em;
+    font-size: 1.5rem;
+}
+#action_games .actiongames .action__card-img {
+    height: 100px;
+}
+
+.gameGallery {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-auto-rows: 10rem;
+}
+
+
+}
+@media only screen and (max-width : 1272px) {
+  .navitem a {
+    padding: 0.5em 0;
+    font-size: 1rem;
+  }
+  .best-gameImg .owl-dots {
+    left: 50% !important;
+  }
+  .nav {
+    display: none;
+  }
+  .menu-btn {
+    display: flex;
+  }
+  .mobile_menu {
+    display: flex;
+    opacity: 1;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+@media only screen and (max-width : 1135px) {
+  #best_games-slider .best-gameVdo .vdoBx__content {
+    width: 310px;
+  }
+  #best_games-slider .best-gameVdo .vdoBx .play_icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  #best_games-slider .best-gameVdo .vdoBx .play_icon::after {
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 12px solid #fff;
+  }
+  .owl-theme .owl-dots .owl-dot span {
+    width: 1.2rem;
+    height: 0.8rem;
+  }
+  .featured_game .roundCard .game_content a {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width : 991px) {
+  .mobile_menu .single_nav {
+    width: 120px;
+  }
+  #best_games-slider .best-gameVdo .vdoBx__content .game_name a {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width : 768px) {
+  .mobile_menu {
+    padding: 1rem;
+  }
+    .sm-hide {
+        display: none !important;
+    }
+  lord-icon {
+    width: 50px !important;
+    height: 40px !important;
+  }
+  #best_games-slider .best-gameVdo .vdoBx__content {
+    width: 380px;
+  }
+  .bestgame_video {
+    margin-bottom: 1rem;
+  }
+  .stars lord-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  #best_games-slider .best-gameVdo .vdoBx__content {
+    max-width: 300px;
+    padding: 2rem;
+  }
+    #playground .spaces {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden !important;
+        z-index: 199999;
+    }
+
+   #playground .spaces  iframe {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        z-index: 199999;
+    }
+}
+@media only screen and (max-width : 600px) {
+  .stars lord-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .cattegory_img {
+    width: 100%;
+    height: 120px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.cattegory_name {
+  border-radius: 0 0 20px 0;
+}
+.owl-nav button.owl-prev {
+    display: none !important;
+}
+.owl-nav button.owl-next {
+    right: -1rem !important;
+    top: -4rem;
+    transform: scale(0.7);
+}
+}
+  @media only screen and (max-width : 450px) {
+ .featured_game .roundCard {
+    width: 15rem;
+    height: 15rem;
+}
+.featured_game .roundCard .gameBx {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+}
+}/*# sourceMappingURL=responsive.css.map */

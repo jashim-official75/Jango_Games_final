@@ -1,0 +1,359 @@
+@extends('layouts.frontend.app')
+@section('header')
+<meta property="og:title" content="Play Free Games Online - NapTechGames | {{ $game->name }} Games">
+<meta name="title" content="Play Free Games Online - NapTechGames | {{ $game->name }} Games" />
+<meta name="description" content="Play Free Games Online - NapTechGames | {{ $game->name }} Games" />
+<meta property="og:image" @if ($game->thumbnail) content="{{ asset('uploads/Games/' . $game->thumbnail) }}" @else
+content="{{ $game->image_link }}" @endif />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="{{ url()->current() }}" />
+<title>Play Free Games Online - NapTechGames | {{ $game->name }} Games</title>
+@endsection
+@section('content')
+<div class="game_showcase">
+
+   
+    <!-- ===================================== -->
+    <!-- GAME PALY PART START -->
+    <!-- ===================================== -->
+    <section id="gamePlay" class="gameplay_showcase">
+        <div class="row">
+            <div class="col-xl-3 col-lg-2 col-md-3">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-12 col-md-12 sm-hide">
+                        <div class="sidebar_add left_add">
+                        
+                        </div>
+                    </div>
+                    <div class="col-md-5 similargame sm-hide">
+                        <span class="similar_games">Similar Games</span>
+                        <div class="row">
+                            @foreach ($related_games->slice(1, 4) as $related_game)
+                            <div class="col-md-12">
+                                <a href="{{ route('gamePlay', $related_game?->Game->slug) }}"
+                                    title="{{ $related_game?->Game->name }}">
+                                    <div class="gameBx">
+                                        <div class="gameImg">
+                                            @if ($related_game?->Game->thumbnail)
+                                            <img src="{{ asset('uploads/Games/' . $related_game?->Game->thumbnail) }}"
+                                                alt="{{ $related_game?->Game->name }} Online {{ $related_game->category_name }} Games on NaptechGames.com"
+                                                title="{{ $related_game?->Game->name }} is the Best Online {{ $related_game->category_name }} Games to Play Free on NapTechGames.com">
+                                            @else
+                                            <img src="{{ $related_game?->Game->image_link }}"
+                                                alt="{{ $related_game?->Game->name }} Online {{ $related_game->category_name }} Games on NaptechGames.com"
+                                                title="{{ $related_game?->Game->name }} is the Best Online {{ $related_game->category_name }} Games to Play Free on NapTechGames.com">
+                                            @endif
+                                        </div>
+                                        <div class="gameName">
+                                            <a href="{{ route('gamePlay', $related_game?->Game->slug) }}"
+                                                title="{{ $related_game?->Game->name }}">{{ strip_tags(Str::limit($related_game?->Game->name, 16)) }}</a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-8 col-md-6">
+                <div class="Gameplayground">
+                    <iframe src="{{ $game->link }}" frameborder="0" height="100%" width="100%"
+                        id="gameplayScreen"></iframe>
+                    <div class="game_bottm sm-hide">
+                        <div class="game_name">
+                            <a href="{{ route('gamePlay', $game->slug) }}" title="{{ $game->name }}"> <span
+                                    class="naptechgames_icon">
+                                    @if ($game->thumbnail)
+                                    <img src="{{ asset('uploads/Games/' . $game->thumbnail) }}" alt="{{ $game->name }}"
+                                        alt="{{ $game->name }} Online {{ $game?->gameCategory?->category_name }} Games on NaptechGames.com"
+                                        title="{{ $game->name }} is the Best Online {{ $game?->gameCategory?->category_name }} Games to Play Free on NapTechGames.com">
+                                    @else
+                                    <img src="{{ $game->image_link }}" alt="{{ $game->name }}"
+                                        alt="{{ $game->name }} Online {{ $game?->gameCategory?->category_name }} Games on NaptechGames.com"
+                                        title="{{ $game->name }} is the Best Online {{ $game?->gameCategory?->category_name }} Games to Play Free on NapTechGames.com">
+                                    @endif
+                                </span>
+                                {{ $game->name }}</a>
+                        </div>
+                        <div class="fullsecreen_btn">
+                            <div class="fullscreen" title="Fullscreen">
+                                <i class="uil uil-expand-arrows" id="fullscrn_btn"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                a
+
+                <div class="col-md-12  sm-hide">
+                    <div class="footer_add">
+                     
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xl-3 col-lg-2 col-md-3">
+                <div class="row">
+                    <div class="col-md-5 similargame sm-hide">
+                        <span class="similar_games">Similar Games</span>
+                        <div class="row">
+                            @foreach ($related_games->slice(5, 4) as $related_game)
+                            <div class="col-md-12">
+                                <a href="{{ route('gamePlay', $related_game?->Game->slug) }}"
+                                    title="{{ $related_game?->Game->name }}">
+                                    <div class="gameBx">
+                                        <div class="gameImg">
+                                            @if ($related_game?->Game->thumbnail)
+                                            <img src="{{ asset('uploads/Games/' . $related_game?->Game->thumbnail) }}"
+                                                alt="{{ $related_game?->Game->name }} Online {{ $related_game->category_name }} Games on NaptechGames.com"
+                                                title="{{ $related_game?->Game->name }} is the Best Online {{ $related_game->category_name }} Games to Play Free on NapTechGames.com">
+                                            @else
+                                            <img src="{{ $related_game?->Game->image_link }}"
+                                                alt="{{ $related_game?->Game->name }} Online {{ $related_game->category_name }} Games on NaptechGames.com"
+                                                title="{{ $related_game?->Game->name }} is the Best Online {{ $related_game->category_name }} Games to Play Free on NapTechGames.com">
+                                            @endif
+                                        </div>
+                                        <div class="gameName">
+                                            <a href="{{ route('gamePlay', $related_game?->Game->slug) }}"
+                                                title="{{ $related_game?->Game->name }}">{{ strip_tags(Str::limit($related_game?->Game->name, 16)) }}</a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-12 col-md-12 sm-hide">
+                        <div class="sidebar_add right_add">
+                           
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===================================== -->
+    <!-- GAME PALY PART END -->
+    <!-- ===================================== -->
+
+
+    <!-- ===================================== -->
+    <!-- GAME VIDEO WALKTHROUGH PART START -->
+    <!-- ===================================== -->
+    <section id="gamePlay" class="gameplay_showcase">
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-3">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 sm-hide">
+                        <div class="sidebar_add left_add">
+                            
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-6">
+                <div class="walkthrough sm-hide">
+                    <div id="gamemonetize-video"></div>
+                    <script type="text/javascript">
+                        window.VIDEO_OPTIONS = {
+                            game: "{{ $game->name }}",
+                            width: "100%",
+                            height: "100%",
+                            color: "#31AD19",
+                            shareBtn: "block",
+                        };
+                        (function (a, b, c) {
+                            var d = a.getElementsByTagName(b)[0];
+                            a.getElementById(c) || (a = a.createElement(b), a.id = c, a.src =
+                                "https://api.gamemonetize.com/video.js?v=" + Date.now(), d.parentNode
+                                .insertBefore(a, d))
+                        })(document, "script", "gamemonetize-video-api");
+                    </script>
+                </div>
+
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-3">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 sm-hide">
+                        <div class="sidebar_add right_add">
+                           
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+
+                    <div class="col-xl-3 col-lg-4 col-12">
+                        <div class="square_add">
+                           
+
+                        </div>
+                    </div>
+
+                    <div class="col-xl-9 col-lg-8 col-12">
+                        <div id="realatedGames" class="sm-hide gamesContent_wrapper">
+                            <div class="gamesContent">
+                                <div class="games_img">
+                                    @if ($game->thumbnail)
+                                    <img src="{{ asset('uploads/Games/' . $game->thumbnail) }}" alt="{{ $game->name }}"
+                                        alt="{{ $game->name }} Online {{ $game?->gameCategory?->category_name }} Games on taptohit.com"
+                                        title="{{ $game->name }} is the Best Online {{ $game?->gameCategory?->category_name }} Games to Play Free on taptohit.com">
+                                    @else
+                                    <img src="{{ $game->image_link }}" alt="{{ $game->name }}"
+                                        alt="{{ $game->name }} Online {{ $game?->gameCategory?->category_name }} Games on taptohit.com"
+                                        title="{{ $game->name }} is the Best Online {{ $game?->gameCategory?->category_name }} Games to Play Free on taptohit.com">
+                                    @endif
+                                </div>
+                                <div class="gameDesc">
+                                    <h1>{{ $game->name }}</h1>
+                                    <p>{!! $game->desc !!}</p>
+                                    @if (strlen($game->desc) < 200) <p>Participate in the excitement of
+                                        "{{ $game->name }}" and fill your spare time with
+                                        enjoyable activities. “{{ $game->name }} is designed for people of every age to
+                                        play and have fun. It is more addicting for players because the gameplay is
+                                        straightforward and the aesthetics are enjoyable. You will be thoroughly
+                                        entertained and engrossed for a considerable amount of time by
+                                        "{{ $game->name }},"
+                                        thanks to its visually spectacular and sonically engaging presentation. Why
+                                        hold off then? action to be taken.</p>
+                                        @endif
+
+                                        @if ($game->desc)
+                                        <p>Play free games on Naptech Games, a free games platform for all. Try a few of
+                                            our other game platforms, such as Jango Games and Tap to Hit, for more free
+                                            games. </p>
+                                        @endif
+                                </div>
+                            </div>
+                            <div class="text-center game_content_add">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div id="realatedGames" class="sm-hide related_showcase">
+                        <h2 class="common_title">Related Games</h2>
+                        <div class="relatedGames flex justify-content-center">
+                            @foreach ($related_games->slice(9, 27) as $related_game)
+                            <a href="{{ route('gamePlay', $related_game?->Game->slug) }}"
+                                title="{{ $related_game?->Game->name }}">
+                                <div class="gameBx ractangleGame">
+                                    <div class="gameImg">
+                                        @if ($related_game?->Game->thumbnail)
+                                        <img src="{{ asset('uploads/Games/' . $related_game?->Game->thumbnail) }}"
+                                            alt="{{ $related_game?->Game->name }} Online {{ $related_game->category_name }} Games on NaptechGames.com"
+                                            title="{{ $related_game?->Game->name }} is the Best Online {{ $related_game->category_name }} Games to Play Free on NapTechGames.com">
+                                        @else
+                                        <img src="{{ $related_game?->Game->image_link }}"
+                                            alt="{{ $related_game?->Game->name }} Online {{ $related_game->category_name }} Games on NaptechGames.com"
+                                            title="{{ $related_game?->Game->name }} is the Best Online {{ $related_game->category_name }} Games to Play Free on NapTechGames.com">
+                                        @endif
+                                    </div>
+                                    <div class="gameName">
+                                        <a href="{{ route('gamePlay', $related_game?->Game->slug) }}"
+                                            title="{{ $related_game?->Game->name }}">{{ strip_tags(Str::limit($related_game?->Game->name, 16)) }}</a>
+                                    </div>
+                                </div>
+                            </a>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- ===================================== -->
+    <!-- GAME VIDEO WALKTHROUGH PART END -->
+    <!-- ===================================== -->
+
+
+
+    <!-- ===================================== -->
+    <!-- GAME PALY CONTENT START -->
+    <!-- ===================================== -->
+    <section id="home_page_content" class="mt-5 cattegory_content sm-hide">
+        <h2>{{ $game->name }} Online {{ $category->category_name }} Game
+        </h2>
+        <p>If you're looking for a fun online <a
+                href="{{ route('categoryGame', $category->category_slug) }}">{{ $category->category_name }}</a> game,
+            look no further than Johnny Shooter.
+            Whether you're a casual gamer or a mid-core gamer, you'll find something to love about this game. <a
+                href="{{ route('index') }}">Naptechgames</a> is the best place to play free online <a
+                href="{{ route('categoryGame', $category->category_slug) }}">{{ $category->category_name }}</a>
+            games, and we've made it so that gamers of all skill levels can have a good time here. </p>
+
+        <h3>Features</h3>
+        <ul class="features">
+            <li>Easy to play</li>
+            <li>Perfect for all ages people</li>
+            <li>Amazing graphics and sound quality</li>
+        </ul>
+
+        <h3> Why is it the best online {{ $category->category_name }} game
+        </h3>
+        <p>You can play Johnny Shooter whenever you want, and it's the best online <a
+                href="{{ route('categoryGame', $category->category_slug) }}">{{ $category->category_name }}</a> game
+            there is. Having fun and not getting bored while killing time has never been easier. <a
+                href="{{ route('index') }}">NapTech Games</a> is a great place to find additional games that you can
+            play for free in
+            your spare time. </p>
+
+        <h2>The best {{ $category->category_name }} games
+        </h2>
+        <ul>
+            @foreach ($related_games->slice(2, 10) as $key => $game)
+            <li><a href="{{ route('gamePlay', $game?->Game->slug) }}">{{ $game?->Game->name }}</a></li>
+            @endforeach
+        </ul>
+
+        <h3>Why NapTech Games</h3>
+        <p>When it comes to online <a
+                href="{{ route('categoryGame', $category->category_slug) }}">{{ $category->category_name }}</a>
+            games,
+            <a href="{{ route('index') }}">NapTech Games</a> is the best
+            and biggest platform available. You don't need to worry about the storage space on your phone or downloading
+            anything. You can play the most popular games that are available online without having to download anything;
+            all you have to do is play the game.
+            <a href="{{ route('index') }}">NapTech Games</a> is the largest source of free online game platforms. It
+            has the most
+            popular types of games, like @foreach ($game_same_categories as $same_category)
+            <a
+                href="{{ route('categoryGame', $same_category->category_slug) }}">{{ $same_category->category_name }}</a>,
+            @endforeach
+
+            Play free online games at <a href="{{ route('index') }}">naptechgames.com.</a>
+
+        </p>
+
+
+
+
+
+    </section>
+    <!-- ===================================== -->
+    <!-- GAME PALY CONTENT END -->
+    <!-- ===================================== -->
+
+</div>
+
+@endsection
+
+@section('script')
+<script type="text/javascript">
+    window.addEventListener("load", function () {
+        // Set a timeout to hide the address bar after page load
+        setTimeout(function () {
+            // Hide the address bar!
+            window.scrollTo(0, 1);
+        }, 0);
+    });
+</script>
+@endsection
